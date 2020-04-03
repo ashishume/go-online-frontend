@@ -1,1 +1,0 @@
-{"version":3,"sources":["Dashboard.css"],"names":[],"mappings":"AAAA,SACI,cACJ,CAEA,WACI,iBACJ","file":"8.65faf18f.chunk.css","sourcesContent":[".heading{\n    font-size: 25px;\n}\n\n.dashboard{\n    padding: 20px 10px;\n}"]}
