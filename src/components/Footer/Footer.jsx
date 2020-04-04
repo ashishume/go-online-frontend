@@ -4,8 +4,8 @@ class Footer extends Component {
   render() {
       return (
         <div>
-          <div class="seven wide column">
-            <h4 class="ui inverted header">HelixLive</h4>
+          <div className="seven wide column">
+            <h4 className="ui inverted header">HelixLive</h4>
             <p>
               Created by{" "}
               <a

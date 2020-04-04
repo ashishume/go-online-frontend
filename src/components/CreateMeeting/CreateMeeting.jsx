@@ -92,7 +92,6 @@ class CreateMeeting extends Component {
   };
 
   changePasswordState = value => {
-    console.log(value);
   };
 
   renderAccessType = props => {
@@ -139,9 +138,9 @@ class CreateMeeting extends Component {
                   name="permanent_room"
                 />
                 <Field component={this.renderAccessType} name="access_type" />
-                {this.state.isPassword ? (
+                {/* {this.state.isPassword ? (
                   <Field component={this.renderPassword} name="password" />
-                ) : null}
+                ) : null} */}
 
                 <button className="ui blue button">Create Meeting</button>
               </div>
@@ -171,7 +170,6 @@ const validate = formValues => {
 };
 
 const mapStateToProps = state => {
-  console.log(state.meetings);
 
   return {};
 };

@@ -4,9 +4,13 @@ import Loader from "../Shared/Loader/Loader";
 import ProtectedRoutes from "./ProtectedRoutes";
 
 const Login = React.lazy(() => import("../../containers/Login/Login"));
-const Dashboard = React.lazy(() => import("../../containers/Dashboard/Dashboard"));
+const Dashboard = React.lazy(() =>
+  import("../../containers/Dashboard/Dashboard")
+);
 const Meeting = React.lazy(() => import("../../containers/Meeting"));
-const MeetingRoom = React.lazy(() => import("../../containers/MeetingRoom/MeetingRoom"));
+const MeetingRoom = React.lazy(() =>
+  import("../../containers/MeetingRoom/MeetingRoom")
+);
 const MainPage = React.lazy(() => import("../../containers/MainPage/MainPage"));
 
 class MainNavigation extends Component {
@@ -25,7 +29,11 @@ class MainNavigation extends Component {
             <Route path="/login" exact component={Login} />
             <ProtectedRoutes path="/dashboard" exact component={Dashboard} />
             <ProtectedRoutes path="/meeting" exact component={Meeting} />
-            <ProtectedRoutes path="/meeting-room/:id" exact component={MeetingRoom} />
+            <ProtectedRoutes
+              path="/meeting-room/:id"
+              exact
+              component={MeetingRoom}
+            />
             <Route path="*" component={() => "404 NOT FOUND"} />
           </Switch>
         </Suspense>
