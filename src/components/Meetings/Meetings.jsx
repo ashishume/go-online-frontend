@@ -31,8 +31,8 @@ class ActiveMeetings extends Component {
     "Start Date/Time",
     "Ended Date/Time",
     "Timezone",
-    "Meeting URL",
-    "Status"
+    "Host",
+    "Join URL",
   ];
 
   renderActiveMeetings = () => {
@@ -65,6 +65,8 @@ class ActiveMeetings extends Component {
 }
 
 const mapStateToProps = state => {
+  console.log(state.meetings);
+  
   return {
     activeMeetings: state.meetings.activeMeetings,
     inactiveMeetings: state.meetings.inactiveMeetings

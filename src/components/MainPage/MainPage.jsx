@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./MainPage.css";
 import Footer from "../Footer/Footer";
+import AboutUs from "../AboutUs/AboutUs";
 class MainPage extends Component {
   render() {
     return (
@@ -25,7 +26,7 @@ class MainPage extends Component {
             </div>
 
             <div className="ui text container">
-              <h1 className="ui inverted header">HelixLive</h1>
+              <h1 className="ui inverted header">Uniprojex Education</h1>
               <h2>Go ahead and find out what's inside</h2>
               <div className="ui huge primary button">
                 <Link to="/login" className="link">
@@ -39,11 +40,13 @@ class MainPage extends Component {
             <div className="ui middle aligned stackable grid container">
               <div className="row">
                 <div className="eight wide column">
-                  <h3 className="ui header">We Help Companies and Companions</h3>
+                  <h3 className="ui header">
+                    We Help Companies and Companions
+                  </h3>
                   <p>
                     We can give your company a better way to teach and showcase
-                    lectures. Let us delight your customers and empower your
-                    needs...through pure data analytics.
+                    lectures. Let us delight your students and empower your
+                    needs.
                   </p>
                   {/* <h3 className="ui header">We Make Bananas That Can Dance</h3>
                   <p>
@@ -53,7 +56,7 @@ class MainPage extends Component {
                 </div>
                 <div className="six wide right floated column">
                   <img
-                    src="https://firebasestorage.googleapis.com/v0/b/uniprojex.appspot.com/o/webinar.png?alt=media&token=1e385b21-d252-4168-bdca-4cdad2b4fd54"
+                    src={require("../../assets/webinar.png")}
                     className="ui large bordered rounded image"
                   />
                 </div>
@@ -66,6 +69,23 @@ class MainPage extends Component {
             </div>
           </div>
 
+          <div className="ui vertical stripe segment">
+            <div className="ui text container">
+              <h3 className="ui header">What we do?</h3>
+              <p>We provide online webinars and lectures services</p>
+              {/* <a className="ui large teal button">Read More</a> */}
+              <AboutUs />
+            </div>
+          </div>
+          {/* <div className="ui vertical stripe segment">
+            <div className="ui text container">
+              <h3 className="ui header">What we do?</h3>
+              <p>We provide online webinars and lectures via our portal</p>
+              <a className="ui large teal button">Read More</a>
+             
+            </div>
+          </div> */}
+
           <div className="ui vertical stripe quote segment">
             <div className="ui equal width stackable internally celled grid">
               <div className="center aligned row">
@@ -77,25 +97,6 @@ class MainPage extends Component {
                   <h3>"I shouldn't have gone with their competitor."</h3>
                 </div>
               </div>
-            </div>
-          </div>
-
-          <div className="ui vertical stripe segment">
-            <div className="ui text container">
-              <h3 className="ui header">What we do?</h3>
-              <p>We provide online webinars and lectures via our portal</p>
-              <a className="ui large button">Read More</a>
-              {/* <h4 className="ui horizontal header divider">
-                <a href="#">Case Studies</a>
-              </h4> */}
-              {/* <h3 className="ui header">Did We Tell You About Our Bananas?</h3>
-              <p>
-                Yes I know you probably disregarded the earlier boasts as
-                non-sequitur filler content, but its really true. It took years
-                of gene splicing and combinatory DNA research, but our bananas
-                can really dance.
-              </p> */}
-              {/* <a className="ui large button">I'm Still Quite Interested</a> */}
             </div>
           </div>
 
@@ -137,7 +138,7 @@ class MainPage extends Component {
                   </div>
                 </div> */}
                 <div className="seven wide column">
-                  <h4 className="ui inverted header">HelixLive</h4>
+                  <h4 className="ui inverted header">Uniprojex Education</h4>
                   <p>
                     Created by{" "}
                     <a

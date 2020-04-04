@@ -5,7 +5,7 @@ class Footer extends Component {
       return (
         <div>
           <div className="seven wide column">
-            <h4 className="ui inverted header">HelixLive</h4>
+            <h4 className="ui inverted header">Uniprojex Education</h4>
             <p>
               Created by{" "}
               <a

@@ -20,7 +20,7 @@ class Login extends Component {
   renderField = props => {
     return (
       <div className="field">
-        <label htmlFor={props.input.name}>Meeting Name</label>
+        <label htmlFor={props.input.name}>email</label>
         <input autoComplete="off" {...props.input} />
         {this.renderError(props.meta)}
       </div>

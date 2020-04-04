@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ActiveMeetings from "../Meetings/Meetings";
+import Meetings from "../Meetings/Meetings";
 import './Dashboard.css'
 class Dashboard extends Component {
   render() {
@@ -8,7 +8,7 @@ class Dashboard extends Component {
         <span className="heading">
         Dashboard
         </span>
-        <ActiveMeetings />
+        <Meetings />
       </div>
     );
   }

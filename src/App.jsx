@@ -5,6 +5,7 @@ import http from "./API/HttpService";
 import { loading } from "./store/actions/loader";
 import { connect } from "react-redux";
 import Loader from "./components/Shared/Loader/Loader";
+import AdminPanelNavigation from "./components/AdminPanel/Navigation/AdminPanelNavigation";
 class App extends Component {
   componentWillMount() {
     const self = this;
@@ -15,6 +16,8 @@ class App extends Component {
         return request;
       },
       (error) => {
+        self.props.loading(false);
+
         return Promise.reject(error);
       }
     );
@@ -26,6 +29,7 @@ class App extends Component {
         return response;
       },
       (error) => {
+        self.props.loading(false);
         return Promise.reject(error);
       }
     );

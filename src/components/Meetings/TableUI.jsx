@@ -33,14 +33,14 @@ const TableUI = props => {
               </Table.Cell>
               <Table.Cell>{value.timezone}</Table.Cell>
               <Table.Cell>
-                <Copy value={value.room_url} />
-              </Table.Cell>
-              <Table.Cell>
                 {value.status == "active" ? (
-                  <Link to={`/meeting-room/${value.id}`}>Go to Meeting</Link>
+                  <Link to={`/meeting-room/${value.id}`}>Host Meeting</Link>
                 ) : (
                   value.status
                 )}
+              </Table.Cell>
+              <Table.Cell>
+                <Copy value={value.room_url} />
               </Table.Cell>
             </Table.Row>
           );

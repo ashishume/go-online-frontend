@@ -8,3 +8,9 @@ export const FETCH_MEETING_BY_ID = "FETCH_MEETING_BY_ID";
 //loader Actions
 export const SHOW_LOADER = "SHOW_LOADER";
 export const HIDE_LOADER = "HIDE_LOADER";
+
+//Admin Actions
+export const ADMIN_LOGIN = "ADMIN_LOGIN";
+export const ADMIN_LOGOUT = "ADMIN_LOGOUT";
+export const FETCH_CONTAINERS = "FETCH_CONTAINERS";
+export const ADD_CONTAINERS = "ADD_CONTAINERS";

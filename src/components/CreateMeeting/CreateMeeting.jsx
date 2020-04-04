@@ -127,7 +127,7 @@ class CreateMeeting extends Component {
         <div className="row">
           <div className="col-md-12">
             <br />
-            <h2>Create Meeting</h2>
+            <h2>Create Meeting/Webinar</h2>
             <form onSubmit={this.props.handleSubmit(this.onSubmit)}>
               <div className="ui form">
                 <Field component={this.renderField} name="name" />
