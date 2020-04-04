@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./MainPage.css";
-import Footer from "../../components/Footer/Footer";
+import Footer from "../Footer/Footer";
 class MainPage extends Component {
   render() {
     return (

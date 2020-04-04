@@ -2,7 +2,7 @@ import React from "react";
 
 import { Table } from "semantic-ui-react";
 import { Link } from "react-router-dom";
-import Copy from "../../components/copyClipboard";
+import Copy from "../copyClipboard";
 const TableUI = props => {
   return (
     <Table celled>

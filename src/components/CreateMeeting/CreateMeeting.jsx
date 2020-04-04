@@ -4,18 +4,18 @@ import { Field, reduxForm } from "redux-form";
 import { createMeeting } from "../../store/actions/index";
 import { connect } from "react-redux";
 class CreateMeeting extends Component {
-  onSubmit = form => {
-    form.containerId = localStorage.getItem('containerId')
+  onSubmit = (form) => {
+    form.containerId = localStorage.getItem("containerId");
     this.props.createMeeting(form);
   };
 
   state = {
-    isPassword: false
+    isPassword: false,
   };
 
   types = [
     { type: "Meeting", value: "meeting" },
-    { type: "Webinar", value: "webinar" }
+    { type: "Webinar", value: "webinar" },
   ];
   permanentTypes = [
     { type: "One Time Scheduled", value: false },
@@ -31,7 +31,7 @@ class CreateMeeting extends Component {
       return <small className="error-message">{error}</small>;
   };
 
-  renderField = props => {
+  renderField = (props) => {
     return (
       <div className="field">
         <label htmlFor={props.input.name}>Meeting Name</label>
@@ -40,7 +40,7 @@ class CreateMeeting extends Component {
       </div>
     );
   };
-  renderPassword = props => {
+  renderPassword = (props) => {
     return (
       <div className="field">
         <label htmlFor={props.input.name}>Password</label>
@@ -50,14 +50,14 @@ class CreateMeeting extends Component {
     );
   };
 
-  renderRoomType = props => {
+  renderRoomType = (props) => {
     return (
       <>
         <div className="field">
           <label htmlFor={props.input.name}>Meeting Type</label>
           <select className="ui dropdown" {...props.input}>
             <option value="">-select a value-</option>
-            {this.types.map(data => {
+            {this.types.map((data) => {
               return (
                 <option key={data.value} value={data.value}>
                   {data.type}
@@ -70,14 +70,14 @@ class CreateMeeting extends Component {
       </>
     );
   };
-  renderPermanentRoom = props => {
+  renderPermanentRoom = (props) => {
     return (
       <>
         <div className="field">
           <label htmlFor={props.input.name}>Meeting Duration</label>
           <select className="ui dropdown" {...props.input}>
             <option value="">-select a value-</option>
-            {this.permanentTypes.map(data => {
+            {this.permanentTypes.map((data) => {
               return (
                 <option key={data.value} value={data.value}>
                   {data.type}
@@ -91,17 +91,16 @@ class CreateMeeting extends Component {
     );
   };
 
-  changePasswordState = value => {
-  };
+  changePasswordState = (value) => {};
 
-  renderAccessType = props => {
+  renderAccessType = (props) => {
     return (
       <>
         <div className="field">
           <label htmlFor={props.input.name}>Meeting Visibility</label>
           <select className="ui dropdown" {...props.input}>
             <option value="">-select a value-</option>
-            {this.accessTypes.map(data => {
+            {this.accessTypes.map((data) => {
               return (
                 <option
                   key={data.value}
@@ -152,7 +151,7 @@ class CreateMeeting extends Component {
   }
 }
 
-const validate = formValues => {
+const validate = (formValues) => {
   const error = {};
   if (!formValues.name) {
     error.name = "Must enter a meeting name";
@@ -169,13 +168,12 @@ const validate = formValues => {
   return error;
 };
 
-const mapStateToProps = state => {
-
+const mapStateToProps = (state) => {
   return {};
 };
 const Redux = connect(mapStateToProps, { createMeeting })(CreateMeeting);
 
 export default reduxForm({
   form: "MeetingForm",
-  validate
+  validate,
 })(Redux);

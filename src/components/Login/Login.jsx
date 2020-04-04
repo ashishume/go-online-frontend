@@ -6,7 +6,7 @@ import { signIn } from "../../store/actions/index";
 import history from "../../history";
 import Email from "../Email/Email";
 import { Link } from "react-router-dom";
-import Footer from "../../components/Footer/Footer";
+import Footer from "../Footer/Footer";
 class Login extends Component {
   onSubmit = formValues => {
     this.props.signIn(formValues);

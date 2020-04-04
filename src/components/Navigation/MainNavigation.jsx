@@ -3,15 +3,15 @@ import { Route, Switch, Redirect } from "react-router-dom";
 import Loader from "../Shared/Loader/Loader";
 import ProtectedRoutes from "./ProtectedRoutes";
 
-const Login = React.lazy(() => import("../../containers/Login/Login"));
+const Login = React.lazy(() => import("../../components/Login/Login"));
 const Dashboard = React.lazy(() =>
-  import("../../containers/Dashboard/Dashboard")
+  import("../../components/Dashboard/Dashboard")
 );
-const Meeting = React.lazy(() => import("../../containers/Meeting"));
+const Meeting = React.lazy(() => import("../../components/CreateMeeting/CreateMeeting"));
 const MeetingRoom = React.lazy(() =>
-  import("../../containers/MeetingRoom/MeetingRoom")
+  import("../../components/MeetingRoom/MeetingRoom")
 );
-const MainPage = React.lazy(() => import("../../containers/MainPage/MainPage"));
+const MainPage = React.lazy(() => import("../../components/MainPage/MainPage"));
 
 class MainNavigation extends Component {
   render() {
