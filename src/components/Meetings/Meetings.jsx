@@ -3,43 +3,46 @@ import ActiveMeetingsUI from "./MeetingUI";
 import { connect } from "react-redux";
 import {
   fetchActiveMeetings,
-  fetchInActiveMeetings
+  fetchInActiveMeetings,
 } from "../../store/actions/index";
 import TableUI from "./TableUI";
 class ActiveMeetings extends Component {
   state = {
-    loader: false
+    loader: false,
   };
   componentDidMount() {
     const active = {
       containerId: localStorage.getItem("containerId"),
-      id: "active"
+      id: "active",
     };
     this.props.fetchActiveMeetings(active);
     const inactive = {
       containerId: localStorage.getItem("containerId"),
-      id: "inactive"
+      id: "inactive",
     };
     this.props.fetchInActiveMeetings(inactive);
   }
 
   Labels = [
-    "Meeting Id",
-    "Room Type",
-    "Meeting Name",
-    "Room PIN",
-    "Start Date/Time",
-    "Ended Date/Time",
-    "Timezone",
-    "Host",
-    "Join URL",
+    { value: "Meeting Id" },
+    { value: "Room Type" },
+    { value: "Meeting Name" },
+    { value: "Room PIN" },
+    { value: "Start Date/Time" },
+    { value: "Ended Date/Time" },
+    { value: "Timezone" },
+    { value: "Host" },
+    { value: "Join URL" },
   ];
 
   renderActiveMeetings = () => {
     if (!this.props.activeMeetings.length)
       return <p>No active meetings found</p>;
     return (
-      <TableUI Labels={this.Labels} meetings={this.props.activeMeetings} />
+      <TableUI
+        Labels={this.Labels}
+        activeMeetings={this.props.activeMeetings}
+      />
     );
   };
 
@@ -47,7 +50,10 @@ class ActiveMeetings extends Component {
     if (!this.props.inactiveMeetings.length)
       return <p>No inactive meetings found</p>;
     return (
-      <TableUI Labels={this.Labels} meetings={this.props.inactiveMeetings} />
+      <TableUI
+        Labels={this.Labels}
+        inactiveMeetings={this.props.inactiveMeetings}
+      />
     );
   };
 
@@ -64,15 +70,13 @@ class ActiveMeetings extends Component {
   }
 }
 
-const mapStateToProps = state => {
-  console.log(state.meetings);
-  
+const mapStateToProps = (state) => {
   return {
     activeMeetings: state.meetings.activeMeetings,
-    inactiveMeetings: state.meetings.inactiveMeetings
+    inactiveMeetings: state.meetings.inactiveMeetings,
   };
 };
 export default connect(mapStateToProps, {
   fetchActiveMeetings,
-  fetchInActiveMeetings
+  fetchInActiveMeetings,
 })(ActiveMeetings);

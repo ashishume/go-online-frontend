@@ -12,8 +12,8 @@ class AdminLogin extends Component {
 
   render() {
     if (
-      localStorage.getItem("type") == "1" ||
-      localStorage.getItem("type") == "0"
+      localStorage.getItem("type") === "1" ||
+      localStorage.getItem("type") === "0"
     ) {
       history.push("/admin-panel-access/admin-dashboard");
     }

@@ -4,7 +4,6 @@ import {
   Switch,
   Redirect,
   // useRouteMatch,
-  BrowserRouter,
 } from "react-router-dom";
 import Loader from "../Shared/Loader/Loader";
 import ProtectedRoutes from "./ProtectedRoutes";
@@ -24,6 +23,9 @@ const MeetingEnd = React.lazy(() =>
   import("../../components/MeetingEnd/MeetingEnd")
 );
 const AboutUs = React.lazy(() => import("../../components/AboutUs/AboutUs"));
+const MeetingSessions = React.lazy(() =>
+  import("../../components/MeetingSessions/MeetingSessions")
+);
 
 //Admin Routes
 const AdminLogin = React.lazy(() => import("../AdminPanel/Auth/Login"));
@@ -54,6 +56,11 @@ class MainNavigation extends Component {
               path="/meeting-room/:id"
               exact
               component={MeetingRoom}
+            />
+            <ProtectedRoutes
+              path="/meeting-session/:id"
+              exact
+              component={MeetingSessions}
             />
 
             {/* Admin Routes */}

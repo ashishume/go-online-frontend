@@ -6,7 +6,6 @@ import { signIn } from "../../store/actions/index";
 import history from "../../history";
 import Email from "../Email/Email";
 import { Link } from "react-router-dom";
-import Footer from "../Footer/Footer";
 class Login extends Component {
   onSubmit = formValues => {
     this.props.signIn(formValues);
@@ -85,6 +84,7 @@ class Login extends Component {
                 className="link"
                 href="https://www.linkedin.com/in/ashishume/"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <b>Ashish Debnath</b>
               </a>

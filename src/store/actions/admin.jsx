@@ -11,9 +11,7 @@ export const adminSignIn = (formValues) => async (dispatch) => {
     payload: response.data,
   });
 
-  console.log(response);
-
-  if (response.status == 200) {
+  if (response.status === 200) {
     localStorage.setItem("type", response.data.result.type);
     history.push("/admin-panel-access/admin-dashboard");
   }

@@ -28,7 +28,7 @@ export class Navbar extends Component {
         {this.state.isSignedIn ? (
           <div className="ui menu">
             <div className="item">
-              <img src={require("../../assets/logo.png")} className="logo" />
+              <img src={require("../../assets/logo.png")} alt="logo" className="logo" />
             </div>
             <div className="item">
               <Link to="/dashboard">Dashboard</Link>

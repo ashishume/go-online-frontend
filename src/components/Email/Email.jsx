@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 class Email extends Component {
   render() {
     const body = "I want a new Connection";
@@ -11,7 +11,7 @@ class Email extends Component {
       <div>
         <br />
         <span>Need new connection?</span>&nbsp;
-        <a href={URL} target="_blank">
+        <a href={URL} target="_blank" rel="noopener noreferrer">
           Contact us
         </a>
       </div>

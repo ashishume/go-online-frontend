@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./MainPage.css";
-import Footer from "../Footer/Footer";
 import AboutUs from "../AboutUs/AboutUs";
 class MainPage extends Component {
   render() {
@@ -26,13 +25,13 @@ class MainPage extends Component {
             </div>
 
             <div className="ui text container">
-              <h1 className="ui inverted header">Uniprojex Education</h1>
+              <h1 className="ui inverted header">Digital Education</h1>
               <h2>Go ahead and find out what's inside</h2>
-              <div className="ui huge primary button">
-                <Link to="/login" className="link">
+              <Link to="/login" className="link">
+                <button className="ui huge primary button">
                   Get Started <i className="right arrow icon"></i>
-                </Link>
-              </div>
+                </button>
+              </Link>
             </div>
           </div>
 
@@ -56,6 +55,8 @@ class MainPage extends Component {
                 </div>
                 <div className="six wide right floated column">
                   <img
+                    rel="noopener noreferrer"
+                    alt="background"
                     src={require("../../assets/webinar.png")}
                     className="ui large bordered rounded image"
                   />
@@ -138,13 +139,14 @@ class MainPage extends Component {
                   </div>
                 </div> */}
                 <div className="seven wide column">
-                  <h4 className="ui inverted header">Uniprojex Education</h4>
+                  <h4 className="ui inverted header">Digital Education</h4>
                   <p>
                     Created by{" "}
                     <a
                       className="link"
                       href="https://www.linkedin.com/in/ashishume/"
                       target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <b>Ashish Debnath</b>
                     </a>

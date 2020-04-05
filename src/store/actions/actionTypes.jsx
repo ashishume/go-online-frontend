@@ -14,3 +14,7 @@ export const ADMIN_LOGIN = "ADMIN_LOGIN";
 export const ADMIN_LOGOUT = "ADMIN_LOGOUT";
 export const FETCH_CONTAINERS = "FETCH_CONTAINERS";
 export const ADD_CONTAINERS = "ADD_CONTAINERS";
+
+//Sessions and Attendees
+export const SESSIONS = "SESSIONS";
+export const ATTENDEES = "ATTENDEES";

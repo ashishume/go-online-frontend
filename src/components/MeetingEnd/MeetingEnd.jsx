@@ -8,7 +8,7 @@ class MeetingEnd extends Component {
         <div className="row">
           <div className="col-md-12">
             <div className="ui segment">
-              <img src={require("../../assets/thank-you.png")} />
+              <img src={require("../../assets/thank-you.png")} alt="Thank You" />
               <h2>Thank you for taking attending the meeting/webinar</h2>
               <Link to="/dashboard">
                 <h3>Dashboard</h3>
