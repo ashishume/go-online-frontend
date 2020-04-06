@@ -7,7 +7,7 @@ import history from "../../history";
 import Email from "../Email/Email";
 import { Link } from "react-router-dom";
 class Login extends Component {
-  onSubmit = formValues => {
+  onSubmit = (formValues) => {
     this.props.signIn(formValues);
   };
 
@@ -16,7 +16,7 @@ class Login extends Component {
       return <small className="error-message">{error}</small>;
   };
 
-  renderField = props => {
+  renderField = (props) => {
     return (
       <div className="field">
         <label htmlFor={props.input.name}>email</label>
@@ -25,7 +25,7 @@ class Login extends Component {
       </div>
     );
   };
-  renderPassword = props => {
+  renderPassword = (props) => {
     return (
       <div className="field">
         <label htmlFor={props.input.name}>Password</label>
@@ -78,6 +78,7 @@ class Login extends Component {
 
         <div className="footer-container">
           <span className="footer">
+            <img src={require("../../assets/logo.png")} />
             <p>
               Created by{" "}
               <a
@@ -96,7 +97,7 @@ class Login extends Component {
   }
 }
 
-const validate = formValues => {
+const validate = (formValues) => {
   const error = {};
   if (!formValues.email) {
     error.name = "Email is required";
@@ -112,5 +113,5 @@ const redux = connect("", { signIn })(Login);
 
 export default reduxForm({
   form: "LoginForm",
-  validate
+  validate,
 })(redux);

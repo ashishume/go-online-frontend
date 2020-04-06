@@ -86,7 +86,7 @@
 .ui.inverted.segment,
 .ui.primary.inverted.segment {
   background: url("../../assets/banner2.jpg");
-  background-size: 100%;
+  background-size:cover;
   background-repeat: no-repeat;
   color: rgba(255, 255, 255, 0.9);
 }

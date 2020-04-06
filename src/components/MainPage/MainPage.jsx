@@ -11,7 +11,7 @@ class MainPage extends Component {
             <div className="ui container">
               {/* <div className="ui large secondary inverted pointing menu">
                 <a className="toc item">
-                <i className="sidebar icon"></i>
+                  <i className="sidebar icon"></i>
                 </a>
                 <a className="active item">Home</a>
                 <a className="item">Work</a>
@@ -25,7 +25,7 @@ class MainPage extends Component {
             </div>
 
             <div className="ui text container">
-              <h1 className="ui inverted header">Digital Education</h1>
+              <h1 className="ui inverted huge header">Digital Education</h1>
               <h2>Go ahead and find out what's inside</h2>
               <Link to="/login" className="link">
                 <button className="ui huge primary button">
