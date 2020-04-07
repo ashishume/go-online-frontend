@@ -6,4 +6,6 @@ export const API_NAME = {
   CONTAINERS: "/container",
   SESSIONS: "/room/sessions",
   ATTENDEES: "/room/attendees",
+  CONTACT: "/contact",
+  AUTH: "/auth",
 };

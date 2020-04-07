@@ -64,8 +64,11 @@ class Login extends Component {
                           <button className="fluid ui green button">
                             Login
                           </button>
-
-                          <Email />
+                          <div className="contact-container">
+                            <br />
+                            <Link to="/contact-us">Contact us</Link>
+                            {/* <Email /> */}
+                          </div>
                         </div>
                       </form>
                     </div>
@@ -78,7 +81,7 @@ class Login extends Component {
 
         <div className="footer-container">
           <span className="footer">
-            <img src={require("../../assets/logo.png")} />
+            <img alt="logo" src={require("../../assets/logo.png")} />
             <p>
               Created by{" "}
               <a

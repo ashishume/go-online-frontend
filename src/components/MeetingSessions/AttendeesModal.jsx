@@ -3,6 +3,7 @@ import { Table, Modal } from "semantic-ui-react";
 import "./AttendanceModal.css";
 class Attendees extends Component {
   render() {
+    
     return (
       <Fragment>
         <Modal open={this.props.show}>

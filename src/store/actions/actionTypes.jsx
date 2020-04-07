@@ -18,3 +18,9 @@ export const ADD_CONTAINERS = "ADD_CONTAINERS";
 //Sessions and Attendees
 export const SESSIONS = "SESSIONS";
 export const ATTENDEES = "ATTENDEES";
+
+export const CONTACT = "CONTACT";
+
+export const ADD_USER = "ADD_USER";
+export const FETCH_USER = "FETCH_USER";
+

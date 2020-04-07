@@ -2,6 +2,8 @@ import * as ActionTypes from "../actions/actionTypes";
 const initialState = {
   adminData: [],
   containers: [],
+  contact: {},
+  users:[]
 };
 
 const adminReducer = (state = initialState, action) => {
@@ -25,6 +27,16 @@ const adminReducer = (state = initialState, action) => {
       return {
         ...state,
         containers: action.payload,
+      };
+    case ActionTypes.CONTACT:
+      return {
+        ...state,
+        contact: action.payload,
+      };
+    case ActionTypes.FETCH_USER:
+      return {
+        ...state,
+        users: action.payload,
       };
     default:
       return state;

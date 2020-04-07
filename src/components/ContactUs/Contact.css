@@ -1,0 +1,7 @@
+.inner-container {
+    display: flex;
+    margin: 10px 20px;
+    height: 550px;
+    justify-content: center;
+    align-items: center;
+}

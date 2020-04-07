@@ -44,11 +44,13 @@ class MeetingSessions extends Component {
                 Attendees
               </button>
 
-              <Attendees
-                show={this.state.showModal}
-                onHide={this.hideModal}
-                data={this.state.dataModal}
-              />
+              {this.state.dataModal.length ? (
+                <Attendees
+                  show={this.state.showModal}
+                  onHide={this.hideModal}
+                  data={this.state.dataModal}
+                />
+              ) : null}
             </Table.Cell>
           </Table.Row>
         );
@@ -70,12 +72,14 @@ class MeetingSessions extends Component {
     };
 
     this.props.fetchAttendees(body);
-    if (this.props.attendees.length) {
-      this.setState({
-        showModal: true,
-        dataModal: this.props.attendees,
-      });
-    }
+    // if (this.props.attendees.length) {
+    this.setState({
+      showModal: true,
+      dataModal: this.props.attendees,
+    });
+
+
+    // }
   };
 
   hideModal = () => {

@@ -12,6 +12,7 @@ const Login = React.lazy(() => import("../../components/Login/Login"));
 const Dashboard = React.lazy(() =>
   import("../../components/Dashboard/Dashboard")
 );
+const Contact = React.lazy(() => import("../../components/ContactUs/Contact"));
 const Meeting = React.lazy(() =>
   import("../../components/CreateMeeting/CreateMeeting")
 );
@@ -31,6 +32,12 @@ const MeetingSessions = React.lazy(() =>
 const AdminLogin = React.lazy(() => import("../AdminPanel/Auth/Login"));
 const AdminDashboard = React.lazy(() =>
   import("../AdminPanel/AdminDashboard/AdminDashboard")
+);
+const CreateContainers = React.lazy(() =>
+  import("../AdminPanel/CreateContainers/CreateContainers")
+);
+const CreateUsers = React.lazy(() =>
+  import("../AdminPanel/CreateUser/CreateUser")
 );
 
 class MainNavigation extends Component {
@@ -52,6 +59,7 @@ class MainNavigation extends Component {
             <ProtectedRoutes path="/thank-you" exact component={MeetingEnd} />
             <ProtectedRoutes path="/meeting" exact component={Meeting} />
             <Route path="/about-us" exact component={AboutUs} />
+            <Route path="/contact-us" exact component={Contact} />
             <ProtectedRoutes
               path="/meeting-room/:id"
               exact
@@ -73,6 +81,16 @@ class MainNavigation extends Component {
               path="/admin-panel-access/admin-dashboard"
               exact
               component={AdminDashboard}
+            />
+            <AdminProtectedRoutes
+              path="/admin-panel-access/create"
+              exact
+              component={CreateContainers}
+            />
+            <AdminProtectedRoutes
+              path="/admin-panel-access/create-user"
+              exact
+              component={CreateUsers}
             />
             <Route path="*" component={() => "404 NOT FOUND"}>
               <Redirect to="/" />

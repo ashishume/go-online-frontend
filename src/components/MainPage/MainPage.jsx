@@ -9,6 +9,13 @@ class MainPage extends Component {
         <div className="pusher">
           <div className="ui inverted vertical masthead center aligned segment">
             <div className="ui container">
+              <div className="header-contact">
+                <Link to="/contact-us">
+                  <button className="ui primary inverted large button">
+                    Contact Us
+                  </button>
+                </Link>
+              </div>
               {/* <div className="ui large secondary inverted pointing menu">
                 <a className="toc item">
                   <i className="sidebar icon"></i>
@@ -40,12 +47,12 @@ class MainPage extends Component {
               <div className="row">
                 <div className="eight wide column">
                   <h3 className="ui header">
-                    We Help Companies and Companions
+                    We Help Schools and Institutions
                   </h3>
                   <p>
-                    We can give your company a better way to teach and showcase
-                    lectures. Let us delight your students and empower your
-                    needs.
+                    We can give your organization a better way to teach and
+                    showcase lectures. Let us delight your students and empower
+                    your needs.
                   </p>
                   {/* <h3 className="ui header">We Make Bananas That Can Dance</h3>
                   <p>
@@ -149,6 +156,9 @@ class MainPage extends Component {
                       rel="noopener noreferrer"
                     >
                       <b>Ashish Debnath</b>
+                      <span>
+                        <br />A <strong>NineMiles</strong> Initiative
+                      </span>
                     </a>
                   </p>
                 </div>
