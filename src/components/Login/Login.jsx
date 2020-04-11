@@ -4,7 +4,7 @@ import "./Login.css";
 import { connect } from "react-redux";
 import { signIn } from "../../store/actions/index";
 import history from "../../history";
-import Email from "../Email/Email";
+// import Email from "../Email/Email";
 import { Link } from "react-router-dom";
 class Login extends Component {
   onSubmit = (formValues) => {

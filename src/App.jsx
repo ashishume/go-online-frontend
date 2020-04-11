@@ -5,7 +5,7 @@ import http from "./API/HttpService";
 import { loading } from "./store/actions/loader";
 import { connect } from "react-redux";
 import Loader from "./components/Shared/Loader/Loader";
-import Message from "./components/Shared/Message/Message";
+// import Message from "./components/Shared/Message/Message";
 class App extends Component {
   componentWillMount() {
     const self = this;

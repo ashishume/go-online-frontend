@@ -33,7 +33,7 @@ export const contactForm = (body) => async (dispatch) => {
     payload: response.data,
   });
 
-  if (response.status == 200) {
+  if (response.status === 200) {
     history.push("/");
   }
 };
@@ -44,7 +44,7 @@ export const addContainer = (body) => async (dispatch) => {
     payload: response.data,
   });
 
-  if (response.status == 200) {
+  if (response.status === 200) {
     history.push("/admin-panel-access/admin-dashboard");
   }
 };
@@ -55,7 +55,7 @@ export const addUser = (body) => async (dispatch) => {
     payload: response.data,
   });
 
-  if (response.status == 200) {
+  if (response.status === 200) {
     history.push("/admin-panel-access/admin-dashboard");
   }
 };

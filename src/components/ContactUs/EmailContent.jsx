@@ -1,8 +1,6 @@
-import React from "react";
-
 const EmailContent = (props) => {
-  let orgs="N/A";
-  if (props.organisation != undefined) {
+  let orgs = "N/A";
+  if (props.organisation !== undefined) {
     orgs = props.organisation;
   }
   const mailBody = `Hi I'm ${props.name}, Here are my details:
@@ -18,7 +16,6 @@ const EmailContent = (props) => {
     subject: `${props.name} has contacted via Digiedu.live`,
     body: mailBody,
   };
-
 
   return body;
 };
