@@ -45,6 +45,9 @@ class Login extends Component {
           <div className="row">
             <div className="col-md-12">
               <br />
+              <div style={{ textAlign: "center" }}>
+                <img alt="logo" src={require("../../assets/logo.png")} />
+              </div>
               <div className="inner-container">
                 <div className="ui cards">
                   <div className="card">
@@ -81,7 +84,7 @@ class Login extends Component {
 
         <div className="footer-container">
           <span className="footer">
-            <img alt="logo" src={require("../../assets/logo.png")} />
+            {/* <img alt="logo" src={require("../../assets/logo.png")} /> */}
             <p>
               Created by{" "}
               <a

@@ -16,6 +16,7 @@ class MainPage extends Component {
                   </button>
                 </Link>
               </div>
+
               {/* <div className="ui large secondary inverted pointing menu">
                 <a className="toc item">
                   <i className="sidebar icon"></i>
@@ -45,6 +46,10 @@ class MainPage extends Component {
           <div className="ui vertical stripe segment">
             <div className="ui middle aligned stackable grid container">
               <div className="row">
+                {/* <div className="center aligned column">
+                </div> */}
+              </div>
+              <div className="row">
                 <div className="eight wide column">
                   <h3 className="ui header">
                     We Help Schools and Institutions
@@ -54,6 +59,9 @@ class MainPage extends Component {
                     showcase lectures. Let us delight your students and empower
                     your needs.
                   </p>
+                  {/* <p>
+                    <img src={require("../../assets/logo.png")} />
+                  </p> */}
                   {/* <h3 className="ui header">We Make Bananas That Can Dance</h3>
                   <p>
                     Yes that's right, you thought it was the stuff of dreams,
@@ -68,11 +76,6 @@ class MainPage extends Component {
                     className="ui large bordered rounded image"
                   />
                 </div>
-              </div>
-              <div className="row">
-                {/* <div className="center aligned column">
-                  <a className="ui huge button">Check Them Out</a>
-                </div> */}
               </div>
             </div>
           </div>
@@ -96,14 +99,26 @@ class MainPage extends Component {
 
           <div className="ui vertical stripe quote segment">
             <div className="ui equal width stackable internally celled grid">
+              <div className="center aligned row"></div>
               <div className="center aligned row">
                 <div className="column">
-                  <h3>"What a Company"</h3>
+                  <h1 className="intro">What we are?</h1>
+                  <br />
+                  <iframe
+                    width="751"
+                    height="421"
+                    src="https://www.youtube.com/embed/d0WLaK_CMTQ"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                  ></iframe>
+
+                  {/* <h3>"What a Company"</h3> */}
                   {/* <p>That is what they all say about us</p> */}
                 </div>
-                <div className="column">
+                {/* <div className="column">
                   <h3>"I shouldn't have gone with their competitor."</h3>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -146,21 +161,38 @@ class MainPage extends Component {
                   </div>
                 </div> */}
                 <div className="seven wide column">
-                  <h4 className="ui inverted header">Digital Education</h4>
-                  <p>
-                    Created by{" "}
+                  <h4 className="ui inverted header">
+                    <img src={require("../../assets/logo.png")} />
+                    Digital Education
+                  </h4>
+                  {/* <p> */}
+                  {/* Created by{" "}
                     <a
                       className="link"
                       href="https://www.linkedin.com/in/ashishume/"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <b>Ashish Debnath</b>
-                      <span>
-                        <br />A <strong>NineMiles</strong> Initiative
-                      </span>
+                    </a> */}
+
+                  {/* <b>Ashish Debnath</b> */}
+                  <span>
+                    <br />A <strong>NineMiles</strong> Initiative
+                    <br />
+                    <a target="_blank" href="https://instagram.com/digiedulive">
+                      <i className="icon instagram"></i>
+                      <strong>Instagram</strong>
                     </a>
-                  </p>
+                    <br />
+                    <a
+                      target="_blank"
+                      href="https://www.facebook.com/digiedu.live/"
+                    >
+                      <i className="icon facebook"></i>{" "}
+                      <strong>Facebook</strong>
+                    </a>
+                  </span>
+                  {/* </p> */}
                 </div>
               </div>
             </div>
