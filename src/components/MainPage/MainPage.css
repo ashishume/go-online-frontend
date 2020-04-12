@@ -124,3 +124,31 @@
   margin: 0 auto;
   text-align: center;
 }
+
+.icon-header {
+  height: 150px;
+  width: 150px;
+}
+.column {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.header,
+.sub-header {
+  font-size: 50px;
+  font-weight: 200;
+  font-family: "Kodchasan", sans-serif;
+}
+
+#stack {
+  margin-top: 100px;
+}
+.sub-header {
+  font-size: 30px;
+  font-weight: 800;
+  color: rgb(77, 77, 77);
+}
+.footer {
+  text-align: left;
+}

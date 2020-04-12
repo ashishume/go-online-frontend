@@ -6,7 +6,6 @@ import configureStore from "./store/configureStore";
 import history from "./history";
 import { Router } from "react-router-dom";
 import "semantic-ui-css/semantic.min.css";
-
 const store = configureStore();
 ReactDOM.render(
   <Provider store={store}>

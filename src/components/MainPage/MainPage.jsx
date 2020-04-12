@@ -10,11 +10,11 @@ class MainPage extends Component {
           <div className="ui inverted vertical masthead center aligned segment">
             <div className="ui container">
               <div className="header-contact">
-                <Link to="/contact-us">
+                {/* <Link to="/contact-us">
                   <button className="ui primary inverted large button">
                     Contact Us
                   </button>
-                </Link>
+                </Link> */}
               </div>
 
               {/* <div className="ui large secondary inverted pointing menu">
@@ -26,8 +26,8 @@ class MainPage extends Component {
                 <a className="item">Company</a>
                 <a className="item">Careers</a>
                 <div className="right item">
-                <a className="ui inverted button">Log in</a>
-                <a className="ui inverted button">Sign Up</a>
+                  <a className="ui inverted button">Log in</a>
+                  <a className="ui inverted button">Sign Up</a>
                 </div>
               </div> */}
             </div>
@@ -35,11 +35,49 @@ class MainPage extends Component {
             <div className="ui text container">
               <h1 className="ui inverted huge header">Digital Education</h1>
               <h2>Go ahead and find out what's inside</h2>
-              <Link to="/login" className="link">
+              <Link to="/contact-us" className="link">
                 <button className="ui huge primary button">
-                  Get Started <i className="right arrow icon"></i>
+                  Book a Demo<i className="right arrow icon"></i>
                 </button>
               </Link>
+            </div>
+          </div>
+          <div className="ui grid container">
+            <div className="row" id="stack">
+              <div className="column">
+                <h1 className="header">Why we are better than others</h1>
+              </div>
+            </div>
+            <div className="row">
+              <div className="ui stackable three column grid">
+                <div className="column">
+                  <img
+                    src={require("../../assets/webinar.png")}
+                    className="icon-header"
+                  />
+                  <h2 className="sub-header">
+                    Online conferencing and webinars
+                  </h2>
+                </div>
+                <div className="column">
+                  <img
+                    src={require("../../assets/gear.png")}
+                    className="icon-header"
+                  />
+                  <h2 className="sub-header">
+                    Highly customisable with admin support
+                  </h2>
+                </div>
+                <div className="column">
+                  <img
+                    src={require("../../assets/tick.png")}
+                    className="icon-header"
+                  />
+                  <h2 className="sub-header">
+                    Easy to use with all teaching features
+                  </h2>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -108,9 +146,9 @@ class MainPage extends Component {
                     width="751"
                     height="421"
                     src="https://www.youtube.com/embed/d0WLaK_CMTQ"
-                    frameborder="0"
+                    frameBorder="0"
                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
+                    allowFullScreen
                   ></iframe>
 
                   {/* <h3>"What a Company"</h3> */}
@@ -128,20 +166,31 @@ class MainPage extends Component {
               <div className="ui stackable inverted divided equal height stackable grid">
                 <div className="three wide column">
                   {/* <h4 className="ui inverted header">About</h4> */}
-                  {/* <div className="ui inverted link list">
-                    <a href="#" className="item">
-                      Sitemap
-                    </a>
-                    <a href="#" className="item">
-                      Contact Us
-                    </a>
-                    <a href="#" className="item">
-                      Religious Ceremonies
-                    </a>
-                    <a href="#" className="item">
-                      Gazebo Plans
-                    </a>
-                  </div> */}
+                  <div className="ui inverted link list">
+                    <h4 className="ui inverted header">
+                      <img src={require("../../assets/logo.png")} />
+                      Digital Education
+                    </h4>
+                    <span>
+                      <br />A <strong>NineMiles</strong> Initiative
+                      <br />
+                      <a
+                        target="_blank"
+                        href="https://instagram.com/digiedulive"
+                      >
+                        <i className="icon instagram"></i>
+                        <strong>Instagram</strong>
+                      </a>
+                      <br />
+                      <a
+                        target="_blank"
+                        href="https://www.facebook.com/digiedu.live/"
+                      >
+                        <i className="icon facebook"></i>{" "}
+                        <strong>Facebook</strong>
+                      </a>
+                    </span>
+                  </div>
                 </div>
                 {/* <div className="three wide column">
                   <h4 className="ui inverted header">Services</h4>
@@ -160,40 +209,33 @@ class MainPage extends Component {
                     </a>
                   </div>
                 </div> */}
-                <div className="seven wide column">
-                  <h4 className="ui inverted header">
-                    <img src={require("../../assets/logo.png")} />
-                    Digital Education
-                  </h4>
-                  {/* <p> */}
-                  {/* Created by{" "}
-                    <a
-                      className="link"
-                      href="https://www.linkedin.com/in/ashishume/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                    </a> */}
-
-                  {/* <b>Ashish Debnath</b> */}
-                  <span>
-                    <br />A <strong>NineMiles</strong> Initiative
-                    <br />
-                    <a target="_blank" href="https://instagram.com/digiedulive">
-                      <i className="icon instagram"></i>
-                      <strong>Instagram</strong>
-                    </a>
-                    <br />
-                    <a
-                      target="_blank"
-                      href="https://www.facebook.com/digiedu.live/"
-                    >
-                      <i className="icon facebook"></i>{" "}
-                      <strong>Facebook</strong>
-                    </a>
-                  </span>
-                  {/* </p> */}
-                </div>
+                {/* <div className="ui container">
+                  <div className="row">
+                    <h4 className="ui inverted header">
+                      <img src={require("../../assets/logo.png")} />
+                      Digital Education
+                    </h4>
+                    <span>
+                      <br />A <strong>NineMiles</strong> Initiative
+                      <br />
+                      <a
+                        target="_blank"
+                        href="https://instagram.com/digiedulive"
+                      >
+                        <i className="icon instagram"></i>
+                        <strong>Instagram</strong>
+                      </a>
+                      <br />
+                      <a
+                        target="_blank"
+                        href="https://www.facebook.com/digiedu.live/"
+                      >
+                        <i className="icon facebook"></i>{" "}
+                        <strong>Facebook</strong>
+                      </a>
+                    </span>
+                  </div>
+                </div> */}
               </div>
             </div>
           </div>
