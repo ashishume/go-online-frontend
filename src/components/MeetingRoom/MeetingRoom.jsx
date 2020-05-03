@@ -36,7 +36,6 @@ class MeetingRoom extends Component {
 }
 
 const mapStateToProps = (state) => {
-  
   return {
     meeting: state.meetings.meeting,
   };

@@ -27,6 +27,7 @@ const AboutUs = React.lazy(() => import("../../components/AboutUs/AboutUs"));
 const MeetingSessions = React.lazy(() =>
   import("../../components/MeetingSessions/MeetingSessions")
 );
+const Privacy = React.lazy(() => import("../PrivacyPolicy/privacyPolicy"));
 
 //Admin Routes
 const AdminLogin = React.lazy(() => import("../AdminPanel/Auth/Login"));
@@ -60,6 +61,7 @@ class MainNavigation extends Component {
             <ProtectedRoutes path="/meeting" exact component={Meeting} />
             <Route path="/about-us" exact component={AboutUs} />
             <Route path="/contact-us" exact component={Contact} />
+            <Route path="/privacy-policy" exact component={Privacy} />
             <ProtectedRoutes
               path="/meeting-room/:id"
               exact

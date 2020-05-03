@@ -72,6 +72,7 @@ export const fetchMeetingByRoomId = (query) => async (dispatch) => {
     type: ActionType.FETCH_MEETING_BY_ID,
     payload: response.data.data.conference,
   });
+  console.log(response);
 };
 
 export const fetchSessions = (body) => async (dispatch) => {
@@ -81,7 +82,6 @@ export const fetchSessions = (body) => async (dispatch) => {
     payload: response.data,
   });
 };
-
 
 export const fetchAttendees = (body) => async (dispatch) => {
   const response = await HttpService.post(API_NAME.ATTENDEES, body);

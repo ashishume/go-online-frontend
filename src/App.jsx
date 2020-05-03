@@ -7,7 +7,7 @@ import { connect } from "react-redux";
 import Loader from "./components/Shared/Loader/Loader";
 // import Message from "./components/Shared/Message/Message";
 class App extends Component {
-  componentWillMount() {
+  componentDidMount() {
     const self = this;
 
     http.interceptors.request.use(

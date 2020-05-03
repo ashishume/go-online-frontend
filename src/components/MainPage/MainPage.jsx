@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./MainPage.css";
 import AboutUs from "../AboutUs/AboutUs";
+import ImageGallery from "../ImageGallery/ImageGallery";
 class MainPage extends Component {
   render() {
     return (
@@ -10,11 +11,11 @@ class MainPage extends Component {
           <div className="ui inverted vertical masthead center aligned segment">
             <div className="ui container">
               <div className="header-contact">
-                {/* <Link to="/contact-us">
+                <Link to="/login">
                   <button className="ui primary inverted large button">
-                    Contact Us
+                    Login
                   </button>
-                </Link> */}
+                </Link>
               </div>
 
               {/* <div className="ui large secondary inverted pointing menu">
@@ -52,6 +53,7 @@ class MainPage extends Component {
               <div className="ui stackable three column grid">
                 <div className="column">
                   <img
+                    alt="webinar"
                     src={require("../../assets/webinar.png")}
                     className="icon-header"
                   />
@@ -61,6 +63,7 @@ class MainPage extends Component {
                 </div>
                 <div className="column">
                   <img
+                    alt="gear"
                     src={require("../../assets/gear.png")}
                     className="icon-header"
                   />
@@ -70,6 +73,7 @@ class MainPage extends Component {
                 </div>
                 <div className="column">
                   <img
+                    alt="tick"
                     src={require("../../assets/tick.png")}
                     className="icon-header"
                   />
@@ -126,14 +130,15 @@ class MainPage extends Component {
               <AboutUs />
             </div>
           </div>
-          {/* <div className="ui vertical stripe segment">
+          <div className="ui vertical stripe segment">
             <div className="ui text container">
-              <h3 className="ui header">What we do?</h3>
-              <p>We provide online webinars and lectures via our portal</p>
-              <a className="ui large teal button">Read More</a>
-             
+              <h3 className="ui header" style={{ textAlign: "center" }}>
+                Screenshots
+              </h3>
+
+              <ImageGallery />
             </div>
-          </div> */}
+          </div>
 
           <div className="ui vertical stripe quote segment">
             <div className="ui equal width stackable internally celled grid">
@@ -143,6 +148,7 @@ class MainPage extends Component {
                   <h1 className="intro">What we are?</h1>
                   <br />
                   <iframe
+                    title="video"
                     width="751"
                     height="421"
                     src="https://www.youtube.com/embed/d0WLaK_CMTQ"
@@ -168,7 +174,7 @@ class MainPage extends Component {
                   {/* <h4 className="ui inverted header">About</h4> */}
                   <div className="ui inverted link list">
                     <h4 className="ui inverted header">
-                      <img src={require("../../assets/logo.png")} />
+                      <img alt="logo" src={require("../../assets/logo.png")} />
                       Digital Education
                     </h4>
                     <span>
@@ -176,6 +182,7 @@ class MainPage extends Component {
                       <br />
                       <a
                         target="_blank"
+                        rel="noopener noreferrer"
                         href="https://instagram.com/digiedulive"
                       >
                         <i className="icon instagram"></i>
@@ -184,6 +191,7 @@ class MainPage extends Component {
                       <br />
                       <a
                         target="_blank"
+                        rel="noopener noreferrer"
                         href="https://www.facebook.com/digiedu.live/"
                       >
                         <i className="icon facebook"></i>{" "}

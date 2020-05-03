@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Field, reduxForm } from "redux-form";
-// import Form from "./Form";
+import "./CreateMeeting.css";
 import { createMeeting } from "../../store/actions/index";
 import { connect } from "react-redux";
 class CreateMeeting extends Component {
@@ -91,7 +91,9 @@ class CreateMeeting extends Component {
     );
   };
 
-  changePasswordState = (value) => {};
+  changePasswordState = (value) => {
+    console.log(value);
+  };
 
   renderAccessType = (props) => {
     return (
@@ -102,15 +104,8 @@ class CreateMeeting extends Component {
             <option value="">-select a value-</option>
             {this.accessTypes.map((data) => {
               return (
-                <option
-                  key={data.value}
-                  onClick={this.changePasswordState}
-                  value={data.value}
-                >
+                <option key={data.value} value={data.value}>
                   {data.type}
-                  {/* {data.value === 2
-                    ? this.setState({ isPassword: true })
-                    : null} */}
                 </option>
               );
             })}
@@ -125,10 +120,13 @@ class CreateMeeting extends Component {
     return (
       <div className="container">
         <div className="row">
-          <div className="col-md-12">
+          <div className="col-md-6">
             <br />
-            <h2>Create Meeting/Webinar</h2>
-            <form onSubmit={this.props.handleSubmit(this.onSubmit)}>
+            <h2>Create Webinar or Meeting</h2>
+            <form
+              className="form"
+              onSubmit={this.props.handleSubmit(this.onSubmit)}
+            >
               <div className="ui form">
                 <Field component={this.renderField} name="name" />
                 <Field component={this.renderRoomType} name="room_type" />
@@ -137,13 +135,18 @@ class CreateMeeting extends Component {
                   name="permanent_room"
                 />
                 <Field component={this.renderAccessType} name="access_type" />
-                {/* {this.state.isPassword ? (
-                  <Field component={this.renderPassword} name="password" />
-                ) : null} */}
-
-                <button className="ui blue button">Create Meeting</button>
+                <button className="ui blue button">Create</button>
               </div>
             </form>
+          </div>
+          <div className="col-md-6">
+            <div className="inner-container">
+              <img
+                src={require("../../assets/webinar.png")}
+                alt="webinar"
+                className="image"
+              />
+            </div>
           </div>
         </div>
       </div>

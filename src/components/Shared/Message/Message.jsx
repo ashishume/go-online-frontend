@@ -13,10 +13,15 @@ class Message extends Component {
     });
   }
 
-  componentDidUpdate() {
-    setTimeout(() => this.setState({ message: "" }), 1000);
-  }
+  // componentDidUpdate() {
+  //   setTimeout(() => this.setState({ message: "" }), 1000);
+  // }
   render() {
+    setTimeout(() => {
+      this.setState({
+        message: "",
+      });
+    }, 2000);
     return (
       <Fragment>
         {this.state.message ? (

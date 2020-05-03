@@ -26,15 +26,19 @@ export class Navbar extends Component {
     return (
       <div>
         {this.state.isSignedIn ? (
-          <div className="ui menu">
+          <div className="ui large menu">
             <div className="item">
-              <img src={require("../../assets/logo.png")} alt="logo" className="logo" />
+              <img
+                src={require("../../assets/logo.png")}
+                alt="logo"
+                className="logo"
+              />
             </div>
             <div className="item">
               <Link to="/dashboard">Dashboard</Link>
             </div>
             <div className="item">
-              <Link to="/meeting">Meeting/Webinar</Link>
+              <Link to="/meeting">Meeting or Webinar</Link>
             </div>
             <div className="right item">
               {this.state.isSignedIn ? (

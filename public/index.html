@@ -1,67 +1,87 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <script
+      data-ad-client="ca-pub-3743383597691737"
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    ></script>
 
-<head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
 
-  <link rel="icon" type="image/x-icon"
-    href="https://firebasestorage.googleapis.com/v0/b/uniprojex.appspot.com/o/logo.png?alt=media&token=bab0ca93-5017-4f8b-9b70-a52a1a2c2f91">
+    <title>Digital Education</title>
+  </head>
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <body>
+    <div id="root"></div>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Kodchasan&display=swap");
 
-  <title>Digital Education</title>
-</head>
+      * {
+        margin: 0;
+        font-family: "Kodchasan", sans-serif;
+      }
+      img {
+        -webkit-user-drag: none;
+        -khtml-user-drag: none;
+        -moz-user-drag: none;
+        -o-user-drag: none;
+        user-drag: none;
+      }
+      body {
+        background-color: #fff;
+      }
+    </style>
 
-<body>
-  <div id="root"></div>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Kodchasan&display=swap');
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-159362230-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-    * {
-      margin: 0;
-      font-family: 'Kodchasan', sans-serif;
-    }
+      gtag("config", "UA-159362230-1");
+    </script>
 
-    body {
-      background-color: #fff;
-    }
-  </style>
+    <div id="fb-root"></div>
+    <script>
+      window.fbAsyncInit = function () {
+        FB.init({
+          xfbml: true,
+          version: "v6.0",
+        });
+      };
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-159362230-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+      (function (d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, "script", "facebook-jssdk");
+    </script>
 
-    gtag('config', 'UA-159362230-1');
-  </script>
-
-
-
-  <div id="fb-root"></div>
-  <script>
-    window.fbAsyncInit = function () {
-      FB.init({
-        xfbml: true,
-        version: 'v6.0'
-      });
-    };
-
-    (function (d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
-
-  <div class="fb-customerchat" attribution=setup_tool page_id="100958954908467">
-  </div>
-
-
-</body>
-
+    <div
+      class="fb-customerchat"
+      attribution="setup_tool"
+      page_id="100958954908467"
+    ></div>
+  </body>
 </html>
